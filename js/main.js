@@ -1,5 +1,4 @@
 // Creare le variabili che inzialmente mi posso servire
-
 let container = document.getElementById("container");
 const button = document.getElementById("play");
 let box = "";
@@ -9,10 +8,10 @@ let box = "";
 let levels = document.getElementById("levels");
 let difficulty = "";
 
-
 // Creare un evento sul bottone play per avviare il gioco
 button.addEventListener("click",
   function(){
+    container.innerHTML = "";
 
     // Stabilire delle condizioni in base alla difficoltà scelta
     if(levels.value == "easy"){
@@ -25,14 +24,14 @@ button.addEventListener("click",
       difficulty = 49;
       box = "box-big";  
     }
-    console.log(box);
+
     // Creare un ciclo for, per stampare un tot di box in base alla difficoltà selezionata
     for(let i = 0; i<difficulty; i++){
-      
       const div = document.createElement("div");
 
       // Inserire le classi che mi servono
       container.appendChild(div);
+      div.innerHTML += [i + 1];
       div.classList.add(box);
       div.classList.add("box");
 

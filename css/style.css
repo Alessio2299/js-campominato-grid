@@ -58,6 +58,7 @@ main{
 }
 .active{
   background-color: rgb(100,	149,	236);
+  box-shadow: 2px 2px 20px #000;
 }
 .box-big{
   width: calc(100% / 7);
